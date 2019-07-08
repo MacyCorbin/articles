@@ -1,10 +1,10 @@
-// momentJS
+// Include the momentJS library
 var moment = require("moment");
 
 // Require Mongoose
 var mongoose = require('mongoose');
 
-// Schema Class
+// Create a Schema Class
 var Schema = mongoose.Schema;
 
 // Create Article Schema
@@ -21,7 +21,7 @@ var ArticleSchema = new Schema({
     type: String,
     required: true
   },
-  
+
   // Summary of Article
   summary: {
     type: String,
@@ -43,7 +43,7 @@ var ArticleSchema = new Schema({
 });
 
 // Create the Article model with Mongoose
-var Article = mongoose.model('article', ArticleSchema);
+var Article = mongoose.model('Article', ArticleSchema);
 
 // Export the Model
-module.exports = article;
+module.exports = Article;

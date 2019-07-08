@@ -1,36 +1,58 @@
-// Node Dependencies
+// Node Dependencies List
 var express = require('express');
 var exphbs = require('express-handlebars');
-var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-var request = require('request');
+var bodyParser = require('body-parser');
+var logger = require('morgan'); 
+var request = require('request'); 
 var cheerio = require('cheerio'); 
 
-//Initialize Express and body parsing
+
+// Initialize Express 
 var app = express();
 app.use(logger('dev'));
 app.use(bodyParser.urlencoded({
-    extended:false
+  extended: false
 }))
 
-// Static Page
+// Static Content
 app.use(express.static(process.cwd() + '/public'));
 
-//Express Handlebars
+// Express-Handlebars
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
-// Import models
-var comment = require('./models/articles.js');
-var article = require('./models/comments.js');
 
-// Import Routes
+//Mongoose Connection
+if(process.env.NODE_ENV == 'production'){
+  mongoose.connect('');
+}
+else{
+  mongoose.connect('mongodb://localhost/news-scraper');
+}
+
+var db = mongoose.connection;
+
+// Mongoose errors
+db.on('error', function(err) {
+  console.log('Mongoose Error: ', err);
+});
+
+// Connection console log
+db.once('open', function() {
+  console.log('Mongoose connection successful.');
+});
+
+// Import models
+var Comment = require('./models/Comment.js');
+var Article = require('./models/Article.js');
+
+// Import Routes/Controller
 var router = require('./controllers/controller.js');
 app.use('/', router);
 
-// Launch App
+// Set up port
 var port = process.env.PORT || 8080;
 app.listen(port, function(){
   console.log('Running on port: ' + port);
 });
-
