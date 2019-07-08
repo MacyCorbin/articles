@@ -1,0 +1,28 @@
+/*Sticky Footer*/
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  
+}
+  
+main {
+    flex: 1 0 auto;
+}
+
+.container{
+    margin-top: 70px;
+}
+
+.collection-header{
+    background-color: #38C790;
+    /* color: white; */
+}
+
+li{
+    color:#2A3852;
+}
+
+.brand-logo{
+    font-family: 'Space Mono', monospace;
+}
