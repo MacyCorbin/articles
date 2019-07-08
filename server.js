@@ -29,7 +29,7 @@ var router = require('./controllers/controller.js');
 app.use('/', router);
 
 // Launch App
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 8080;
 app.listen(port, function(){
   console.log('Running on port: ' + port);
 });
