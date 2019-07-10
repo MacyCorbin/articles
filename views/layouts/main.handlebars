@@ -1,102 +1,89 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <!-- Tab Title -->
     <title>Article Assemble</title>
 
     <!-- View Port Size -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <!-- Materialize - Compiled and minified CSS -->
+
+    <!-- Compiled and minified CSS -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
-    
-    <!-- Materialize - Icons -->
+    <!-- Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Space+Mono:700&display=swap" rel="stylesheet">
 
     <!-- CSS -->
     <base href="/">
     <link rel="stylesheet" href="assets/style/cssStyle.css">
+  </head>
 
-</head>
-
-<body>
-
-    <!-- Nav Bar -->
-
-    <nav style="background-color: #04899B; padding: 30px 250px 30px 250px; height: 120px">
-
-        <a href="/" class="brand-logo"><i class="material-icons">loop</i> Article Assemble</a>
+  <body>
+  
+    <!-- Fixed Nav Bar -->
+    
+    <nav style= "background-color: #04899B; padding: 30px 250px 30px 250px; height: 120px">
+        
+        <a href="/" class="brand-logo"><i class="material-icons">loop</i> Artlicle Assemble</a>
         <a href="" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-            <li><a href="https://www.livescience.com/environment" target="_new">Live Science</a></li>
+        <li><a href="https://www.livescience.com/environment" target="_new">Live Science</a></li>
         </ul>
-
+       
     </nav>
-
+   
 
     <!-- For Mobile Nav Bar -->
-    <ul class="side-nav" style="background-color: #04899B" id="mobile-demo">
-        <li><a href="https://www.livescience.com/environment" target="_new">Live Science</a></li>
+    <ul class="side-nav darken-3" id="mobile-demo">
+      <li><a href="https://www.livescience.com/environment" target="_new">Live Science</a></li>
     </ul>
 
 
     <!-- Page Content -->
-    <main>
+    <main> 
 
-        <!-- Info on navigating site -->
-        <div class="container">
-            <ul class="collection with-header">
-                <li class="collection-header" style="background-color: #38C790; color: white">
-                    <h4>Welcome to Scraper!</h4>
-                </li>
-                <li class="collection-item" style="color:#2A3852">This site lets you read and comment on articles that were scraped from Live Science</li>
-                <li class="collection-item">
-                    <div>Click <i class="material-icons">loop</i> in the navbar to scrape articles.</div>
-                </li>
-                <li class="collection-item">
-                    <div>Click <i class="material-icons">import_contacts</i> to read an article.</div>
-                </li>
-                <li class="collection-item">
-                    <div>Click <i class="material-icons">add</i> to add a comment.</div>
-                </li>
-                <li class="collection-item">
-                    <div>Click <i class="material-icons">forum</i> to read comments.</div>
-                </li>
-            </ul>
-        </div>
+      <!-- Site Info Container -->
+      <div class="container">
+        <ul class="collection with-header">
+          <li class="collection-header" style="background-color: #38C790; color: white"><h4>Welcome to Scraper!</h4></li>
+          <li class="collection-item" >This site lets you read and comment on articles that were scraped from the web.</li>
+          <li class="collection-item"><div>Click <i class="material-icons">loop</i> in the navbar to re-scrape data.</div></li>
+          <li class="collection-item"><div>Click <i class="material-icons">import_contacts</i> to view an article.</div></li>
+          <li class="collection-item"><div>Click <i class="material-icons">add</i> to add a comment.</div></li>
+          <li class="collection-item"><div>Click <i class="material-icons">forum</i> to read comments.</div></li>
+        </ul>
+      </div>
 
 
-        <!-- Render Articles -->
-        <div class="container">
-            {{{body}}}
-        </div>
+      <!-- Render All Articles -->
+      <div class="container">
+        {{{body}}}
+      </div>
 
     </main>
 
 
     <!-- Footer -->
     <footer class="page-footer" style="background-color: #04899B;color:white; height: 100px; padding-top:40px; text-align:center">
-        © Does not claim copyright. All article data was web scraped from
-        <a style="color:#38C790" href="https://www.livescience.com/">www.livescience.com/</a>
+        © Does not claim copyright. All article data was web scraped from 
+        <a style= "color:#38C790" href="https://www.livescience.com/">www.livescience.com/</a>
 
     </footer>
 
 
 
     <!-- jQuery CDN -->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 
-
+    <!-- JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
 
-    <!-- Javascript Repsonsiveness -->
+    <!-- JavaScript Repsonsiveness -->
     <script type="text/javascript" src="assets/javascript/app.js"></script>
-
-</body>
+    
+  </body>
 
 </html>

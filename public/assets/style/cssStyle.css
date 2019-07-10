@@ -1,4 +1,4 @@
-
+/*Sticky Footer*/
 body {
     display: flex;
     min-height: 100vh;
@@ -23,6 +23,3 @@ li{
     color:#2A3852;
 }
 
-.brand-logo{
-    font-family: 'Space Mono', monospace;
-}
