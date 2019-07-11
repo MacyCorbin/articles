@@ -25,22 +25,28 @@ app.set('view engine', 'handlebars');
 
 //Mongoose Connection
 // if(process.env.NODE_ENV == 'production'){
-//   mongoose.connect('');
+//   mongoose.connect('mongodb://heroku_bktjf7vr:qbjvgbtn3iasdetb97v0uf5oht@ds161503.mlab.com:61503/heroku_bktjf7vr');
 // }
 // else{
 //   mongoose.connect('mongodb://localhost/news-scraper');
 // }
+// var db = mongoose.connection;
 
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+mongoose.connect( // Connect to the Mongo DB
+  process.env.MONGODB_URI || "mongodb://heroku_bktjf7vr:qbjvgbtn3iasdetb97v0uf5oht@ds161503.mlab.com:61503/heroku_bktjf7vr"
+);
 
-mongoose.connect(MONGODB_URI);
+
+// var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+
+// mongoose.connect(MONGODB_URI);
 
 // Mongoose errors
 // db.on('error', function(err) {
 //   console.log('Mongoose Error: ', err);
 // });
 
-// // Connection console log
+// // // Connection console log
 // db.once('open', function() {
 //   console.log('Mongoose connection successful.');
 // });
