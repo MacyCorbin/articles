@@ -43,7 +43,7 @@ db.once('open', function() {
   console.log('Mongoose connection successful.');
 });
 
-// Import models
+// Import models: Comment and Artcle
 var Comment = require('./models/Comment.js');
 var Article = require('./models/Article.js');
 

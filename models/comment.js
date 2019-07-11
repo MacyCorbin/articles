@@ -1,21 +1,22 @@
-
+// Mongoose
 var mongoose = require('mongoose');
 
-
+//Schema Created
 var Schema = mongoose.Schema;
 
-
+// Comment Schema
 var CommentSchema = new Schema({
 
- 
+  // Author Name
   author: {
     type: String
   },
- 
+
+  // Comment
   content: {
     type: String
   }
-  
+
 });
 
 
