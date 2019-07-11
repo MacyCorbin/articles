@@ -32,14 +32,14 @@ app.set('view engine', 'handlebars');
 // }
 // var db = mongoose.connection;
 
-mongoose.connect( // Connect to the Mongo DB
-  process.env.MONGODB_URI || "mongodb://heroku_bktjf7vr:qbjvgbtn3iasdetb97v0uf5oht@ds161503.mlab.com:61503/heroku_bktjf7vr"
-);
+// mongoose.connect( // Connect to the Mongo DB
+//   process.env.MONGODB_URI || "mongodb://heroku_bktjf7vr:qbjvgbtn3iasdetb97v0uf5oht@ds161503.mlab.com:61503/heroku_bktjf7vr"
+// );
 
 
-// var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 
-// mongoose.connect(MONGODB_URI);
+mongoose.connect(MONGODB_URI);
 
 // Mongoose errors
 // db.on('error', function(err) {
