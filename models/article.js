@@ -8,7 +8,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 // Article Schema
-var ArticleSchema = new Schema({
+var ArticlesSchema = new Schema({
 
   // Article Title
   title: {
@@ -42,6 +42,6 @@ var ArticleSchema = new Schema({
 
 });
 
-var Article = mongoose.model('Article', ArticleSchema);
+var Article = mongoose.model('Article', ArticlesSchema);
 
 module.exports = Article;

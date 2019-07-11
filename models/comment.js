@@ -5,7 +5,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 // Comment Schema
-var CommentSchema = new Schema({
+var CommentsSchema = new Schema({
 
   // Author Name
   author: {
@@ -20,7 +20,7 @@ var CommentSchema = new Schema({
 });
 
 
-var Comment = mongoose.model('Comment', CommentSchema);
+var Comment = mongoose.model('Comment', CommentsSchema);
 
 
 module.exports = Comment;
