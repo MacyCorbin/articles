@@ -24,24 +24,26 @@ app.set('view engine', 'handlebars');
 
 
 //Mongoose Connection
-if(process.env.NODE_ENV == 'production'){
-  mongoose.connect('');
-}
-else{
-  mongoose.connect('mongodb://localhost/news-scraper');
-}
+// if(process.env.NODE_ENV == 'production'){
+//   mongoose.connect('');
+// }
+// else{
+//   mongoose.connect('mongodb://localhost/news-scraper');
+// }
 
-var db = mongoose.connection;
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+
+mongoose.connect(MONGODB_URI);
 
 // Mongoose errors
-db.on('error', function(err) {
-  console.log('Mongoose Error: ', err);
-});
+// db.on('error', function(err) {
+//   console.log('Mongoose Error: ', err);
+// });
 
-// Connection console log
-db.once('open', function() {
-  console.log('Mongoose connection successful.');
-});
+// // Connection console log
+// db.once('open', function() {
+//   console.log('Mongoose connection successful.');
+// });
 
 // Import models: Comment and Artcle
 var Comment = require('./models/Comment.js');
